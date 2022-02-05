@@ -1,0 +1,24 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    
+    
+    {% if search %}
+    <h2> You are searching for: {{ value }}</h2>
+    {% else %}
+    <h1>All Pages</h1>
+    {% endif %}
+    {% if entries %}
+    <ul>
+        {% for entry in entries %}
+        <li><a href = "/wiki/{{ entry }}">{{ entry }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h2> Sorry, the page you are looking for doesn't exist yet...</h2>
+    {% endif %}
+{% endblock %}

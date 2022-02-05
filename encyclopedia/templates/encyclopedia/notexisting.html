@@ -1,0 +1,9 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Empty Page
+{% endblock %}
+
+{% block body %}
+<h4> I'm sorry, page you are looking for doesn't exist yet... you can create it by visiting <a href="{% url 'newEntry' %}">this link</a></h4>
+   {% endblock %}
